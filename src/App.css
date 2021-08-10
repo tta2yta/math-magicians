@@ -1,10 +1,21 @@
-.App {
-  text-align: center;
-}
 
 .calculator{
   margin: 10% auto;
-  width: 500px;
+  width: 400px;
   height: 500px;
   border: 1px solid black;
+}
+
+.calculator-body, .calculator-body-last{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  padding: 0;
+}
+.calculator-body > div, .calculator-body-last > div  {
+  border: 1px solid red;
+  width: 100%;
+  
+}
+.cols-span-2{
+  grid-column: 1 / span 2;
 }
