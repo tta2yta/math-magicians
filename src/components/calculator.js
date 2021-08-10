@@ -11,6 +11,11 @@ export default class Calculator extends React.Component {
     return (
       <div className="calculator">
         <div className="calculator-body">
+          <div className="input-val">
+              <input type="text" value="0"/>
+          </div>
+        </div>
+        <div className="calculator-body">
           <div className="calc-row">AC</div>
           <div className="calc-row">+/-</div>
           <div className="calc-row">%</div>

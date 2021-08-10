@@ -20,6 +20,22 @@
   /* background-color: blue; */
   
 }
+.input-val{
+  grid-column:1 / span 4;
+  padding: 0;
+  position: relative;
+  height: 30px;
+}
+
+input[type="text"]{
+  position:absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box; 
+  border: 0;
+}
 .cols-span-2{
   grid-column: 1 / span 2;
 }
