@@ -12,8 +12,12 @@
   padding: 0;
 }
 .calculator-body > div, .calculator-body-last > div  {
-  border: 1px solid red;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+  padding: 10px 0;
   width: 100%;
+  text-align: center;
+  /* background-color: blue; */
   
 }
 .cols-span-2{
