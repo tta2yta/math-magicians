@@ -1,48 +1,58 @@
 
-.calculator{
+.calculator {
   margin: 10% auto;
   width: 400px;
   height: 500px;
+
   /* border: 1px solid black; */
 }
 
-.calculator-body, .calculator-body-last{
+.calculator-body,
+.calculator-body-last {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
   padding: 0;
 }
-.calculator-body > div, .calculator-body-last > div  {
-  
+
+.calculator-body > div,
+.calculator-body-last > div {
   padding: 15px 0;
   width: 100%;
   text-align: center;
+
   /* background-color: blue; */
-  
 }
-.input-val{
-  grid-column:1 / span 4;
+
+.input-val {
+  grid-column: 1 / span 4;
   padding: 0;
   position: relative;
   height: 30px;
 }
 
-input[type="text"]{
-  position:absolute;
+input[type="text"] {
+  position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 100%;
-  box-sizing: border-box; 
-  border: 2px solid #E0E0E0;
+  box-sizing: border-box;
+  border: 2px solid #e0e0e0;
+  background-color: #858694;
+  color: white;
+  text-align: right;
 }
-.cols-span-2{
+
+.cols-span-2 {
   grid-column: 1 / span 2;
 }
 
-.calc-row{
-  background-color: #E0E0E0;
-  border: 2px solid #D1D1D1;
+.calc-row {
+  background-color: #e0e0e0;
+  border: 2px solid #d1d1d1;
+  box-sizing: border-box;
 }
-.arthemetic{
-  background-color:#F5913E ;
+
+.arthemetic {
+  background-color: #f5913e;
 }

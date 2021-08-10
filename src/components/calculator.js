@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 
 export default class Calculator extends React.Component {
@@ -12,21 +11,14 @@ export default class Calculator extends React.Component {
       <div className="calculator">
         <div className="calculator-body">
           <div className="input-val">
-              <input type="text" value="0"/>
+            <input type="text" value="0" />
           </div>
         </div>
         <div className="calculator-body">
           <div className="calc-row">AC</div>
           <div className="calc-row">+/-</div>
           <div className="calc-row">%</div>
-          <div className="calc-row arthemetic">*</div>
-        </div>
-
-        <div className="calculator-body">
-          <div className="calc-row">AC</div>
-          <div className="calc-row">+/-</div>
-          <div className="calc-row">%</div>
-          <div className="calc-row arthemetic">/</div>
+          <div className="calc-row arthemetic">÷</div>
         </div>
 
         <div className="calculator-body">
@@ -34,6 +26,13 @@ export default class Calculator extends React.Component {
           <div className="calc-row">8</div>
           <div className="calc-row">9</div>
           <div className="calc-row arthemetic">*</div>
+        </div>
+
+        <div className="calculator-body">
+          <div className="calc-row">4</div>
+          <div className="calc-row">5</div>
+          <div className="calc-row">6</div>
+          <div className="calc-row arthemetic">-</div>
         </div>
 
         <div className="calculator-body">
