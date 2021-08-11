@@ -37,15 +37,16 @@ export default class Calculator extends React.Component {
     if(e.target.outerText==='+' || e.target.outerText==='-' || e.target.outerText==='x' || e.target.outerText==='÷'){
       this.setState({operation:e.target.outerText})
       const res= calculate(this.state, e.target.outerText)
-     this.setState({...res})
-     console.log(res)
+      this.setState({next: res.next})
+      this.setState({total: res.total})
+      console.log(res)
      console.log(this.state)
 
     }
 
     if(e.target.outerText==='='){
-      const res= calculate(this.state, e.target.outerText)
-        this.setState({...res})
+      const res= calculate(this.state, e.target.outerText) 
+      this.setState({...res})
         this.setState({next:res.total})
       console.log(res)
       console.log(this.state)
@@ -68,9 +69,12 @@ export default class Calculator extends React.Component {
     this.setState({...res})
     this.setState({next:res.next})
 }
+if(e.target.outerText==='%' ){
+  this.setState({next: parseFloat(this.state.next / 100).toString()})
+}
 }
 componentDidUpdate(){
-  // console.log(this.state)
+  console.log(this.state)
   
 }
 
