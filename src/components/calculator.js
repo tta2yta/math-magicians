@@ -9,7 +9,7 @@ export default class Calculator extends React.Component {
     this.state = {
       total: 0,
       next: 0,
-      operator: null,
+      operation: null,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -33,7 +33,30 @@ export default class Calculator extends React.Component {
      console.log(res)
       
     }
+
+    if(e.target.outerText==='+' || e.target.outerText==='-' || e.target.outerText==='x' || e.target.outerText==='÷'){
+      this.setState({operation:e.target.outerText})
+      const res= calculate(this.state, e.target.outerText)
+     this.setState({...res})
+     console.log(res)
+     console.log(this.state)
+
+    }
+
+    if(e.target.outerText==='='){
+      const res= calculate(this.state, e.target.outerText)
+      // this.setState({total:res.total, next:res.next, 
+      //   operation: res.operation})
+        this.setState({...res})
+        this.setState({next:res.total})
+      console.log(res)
+      console.log(this.state)
+    }
   }
+componentDidUpdate(){
+  // console.log(this.state)
+  
+}
 
   render() {
     return (
@@ -54,7 +77,7 @@ export default class Calculator extends React.Component {
           <div className="calc-row" onClick={this.handleClick} >7</div>
           <div className="calc-row" onClick={this.handleClick} >8</div>
           <div className="calc-row" onClick={this.handleClick} >9</div>
-          <div className="calc-row arthemetic" onClick={this.handleClick} >*</div>
+          <div className="calc-row arthemetic" onClick={this.handleClick} >x</div>
         </div>
 
         <div className="calculator-body">
