@@ -52,10 +52,23 @@ export default class Calculator extends React.Component {
     }
     if(e.target.outerText==='.'){
       const res= calculate(this.state, e.target.outerText)
+     console.log(res)
+      if(Object.entries(res).length !==0) {
         this.setState({...res})
         this.setState({next:res.next})
+      }
+    
     }
+    if(e.target.outerText==='AC' ){
+      const reset={total:0, next:0, operation:null}
+      this.setState({...reset})
   }
+  if(e.target.outerText==='+/-' ){
+    const res= calculate(this.state, e.target.outerText)
+    this.setState({...res})
+    this.setState({next:res.next})
+}
+}
 componentDidUpdate(){
   // console.log(this.state)
   
