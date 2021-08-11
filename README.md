@@ -25,7 +25,7 @@ Read a random math-related quote.
 
 
 ## 🔴 Live Demo <a name = "live"></a>
-**Click [here]() in order to see a Live Demo of this project.**
+**Click [here](https://math-magicianss.herokuapp.com/) in order to see a Live Demo of this project.**
 
 
 ## 🔧 Built with<a name = "with"></a>
