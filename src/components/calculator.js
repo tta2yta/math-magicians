@@ -27,8 +27,8 @@ export default class Calculator extends React.Component {
     return (
       <div className="calculator">
         <div className="calculator-body">
-          <div className="input-val" value={this.state.total}>
-            <input type="text" value="0" />
+          <div className="input-val" >
+            <input type="text" value={this.state.total} onChange={this.handleChange}  />
           </div>
         </div>
         <div className="calculator-body">
