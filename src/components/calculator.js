@@ -45,12 +45,15 @@ export default class Calculator extends React.Component {
 
     if(e.target.outerText==='='){
       const res= calculate(this.state, e.target.outerText)
-      // this.setState({total:res.total, next:res.next, 
-      //   operation: res.operation})
         this.setState({...res})
         this.setState({next:res.total})
       console.log(res)
       console.log(this.state)
+    }
+    if(e.target.outerText==='.'){
+      const res= calculate(this.state, e.target.outerText)
+        this.setState({...res})
+        this.setState({next:res.next})
     }
   }
 componentDidUpdate(){
