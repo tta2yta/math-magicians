@@ -14,7 +14,12 @@ export default function operate(numberOne, numberTwo, operation) {
     return one.times(two).toString();
   }
   if (operation === '÷') {
-    return one.div(two).toString();
+    if (numberTwo !== '0'){
+        console.log(numberTwo)
+        return one.div(two).toString();
+    }
+    else
+    return numberOne;
   }
   if (operation === '%') {
     return one.mod(two).toString();
