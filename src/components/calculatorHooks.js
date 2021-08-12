@@ -10,15 +10,12 @@ export function Calculator() {
 
   const handleClick = (e) => {
     if (isNumber(e.target.outerText)) {
-        //this.setState({ next: e.target.outerText });
-        // setNext(e.target.outerText)
         console.log(e.target.outerText)
         const prevNext = prevCountRef.current;
         console.log(prevNext)
         const obj = {total:0, next:prevNext, operation:null}
         console.log(obj)
         const res = calculate(obj, e.target.outerText);
-        // this.setState({ next: res.next });
         console.log(res)
         setNext(res.next)
       }
