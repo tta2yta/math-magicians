@@ -13,11 +13,26 @@ export function Calculator() {
         console.log(e.target.outerText)
         const prevNext = prevCountRef.current;
         console.log(prevNext)
-        const obj = {total:0, next:prevNext, operation:null}
+        setNext(e.target.value)
+        const obj = {total, next, operation}
         console.log(obj)
         const res = calculate(obj, e.target.outerText);
         console.log(res)
         setNext(res.next)
+      }
+
+      if (e.target.outerText === '+' || e.target.outerText === '-' || e.target.outerText === 'x' || e.target.outerText === '÷') {
+        // this.setState({ operation: e.target.outerText });
+        setOperation(e.target.outerText)
+        console.log(e.target.outerText)
+        const obj = {total, next, operation:e.target.outerText}
+        console.log(obj)
+        const res = calculate(obj, e.target.outerText);
+        // this.setState({ next: res.next });
+        // this.setState({ total: res.total });
+        setNext(res.next)
+        setTotal(res.total)
+        console.log(res);
       }
 
   };
