@@ -15,7 +15,6 @@ export default function operate(numberOne, numberTwo, operation) {
   }
   if (operation === '÷') {
     if (numberTwo !== '0'){
-        console.log(numberTwo)
         return one.div(two).toString();
     }
     else

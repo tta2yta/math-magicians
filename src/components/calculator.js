@@ -13,6 +13,13 @@ export default class Calculator extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount() {
+    const { next } = this.state;
+    if (next === null) {
+      this.setState({ next: 0 });
+    }
+  }
+
   handleChange(e) {
     this.setState({ next: e.target.value });
   }
@@ -31,6 +38,7 @@ export default class Calculator extends React.Component {
       const res = calculate(obj, e.target.outerText);
       this.setState({ next: res.next });
       this.setState({ total: res.total });
+      console.log(res);
     }
 
     if (e.target.outerText === '=') {
@@ -42,6 +50,7 @@ export default class Calculator extends React.Component {
     if (e.target.outerText === '.') {
       const obj = this.state;
       const res = calculate(obj, e.target.outerText);
+
       if (Object.entries(res).length !== 0) {
         this.setState({ ...res });
         this.setState({ next: res.next });
