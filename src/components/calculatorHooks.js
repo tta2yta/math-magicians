@@ -35,6 +35,16 @@ export function Calculator() {
         console.log(res);
       }
 
+      if (e.target.outerText === '=') {
+        const obj = {total, next, operation}
+        console.log(obj)
+        const res = calculate(obj, e.target.outerText);
+        console.log(res)
+        setNext(res.total)
+        setOperation(res.operation)
+        setTotal(0)
+      }
+
   };
 
   const onChange = (e) => {
