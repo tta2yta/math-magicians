@@ -1,31 +1,28 @@
-/* eslint-disable */
-import {useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import calculate from '../logic/calculate';
 
-export function Calculator() {
-
-const [state, setState] = useState({
+export default function Calculator() {
+  const [state, setState] = useState({
     total: null,
     next: null,
     operation: null,
   });
 
-  const onChange=(e)=>{
+  const onChange = () => {
 
-  }
+  };
 
   const handleClick = (e) => {
     setState({ ...state, ...calculate(state, e.target.outerText) });
   };
   const { next, total } = state;
-  const isNumber=(item) => !!item.match(/[0-9]+/)
   return (
     <div className="calculator">
       <div className="calculator-body">
         <div className="input-val">
           {/* <input type="text" value={next===null? total : next} onChange={onChange} /> */}
           <input type="text" value={next || total || '0'} onChange={onChange} />
-        
+
         </div>
       </div>
       <div className="calculator-body">
