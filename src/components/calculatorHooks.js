@@ -20,7 +20,6 @@ export default function Calculator() {
     <div className="calculator">
       <div className="calculator-body">
         <div className="input-val">
-          {/* <input type="text" value={next===null? total : next} onChange={onChange} /> */}
           <input type="text" value={next || total || '0'} onChange={onChange} />
 
         </div>
