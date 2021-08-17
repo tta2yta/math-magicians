@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Calculator from './components/calculatorHooks';
+import Calculator from './components/calculator';
 import NavBar from './components/NavBar';
 import Home from './pages/home';
 import Qoutes from './pages/Qoutes';

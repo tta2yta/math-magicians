@@ -118,8 +118,8 @@ export default class Calculator extends React.Component {
             <div className="calc-row arthemetic" onClick={this.handleClick}>=</div>
           </div>
         </div>
-        <div>
-          <h2>Let's do some math</h2>
+        <div className="math-logic">
+          <h2>Let&#39;s do some math</h2>
         </div>
       </div>
     );
