@@ -10,8 +10,13 @@ const NavBar = () => {
     },
     {
       id: 2,
-      path: '/about',
-      text: 'About',
+      path: '/calculator',
+      text: 'Calculator',
+    },
+    {
+      id: 3,
+      path: '/Qoute',
+      text: 'Qoute',
     },
   ];
   return (
