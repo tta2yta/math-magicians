@@ -54,10 +54,36 @@ input[type="text"] {
 }
 .navBar{
   display: flex;
-  justify-content: flex-end
+}
+.navBar h1{
+  width: 70%;
+  font-size: 40px;
+  margin-top: 0;
+  padding-left: 10px;
 }
 
+.navBar ul{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
 
 .navBar ul a{
   margin-right: 50px;
+}
+
+.home {
+  margin: 0 30px;
+}
+
+.home h3{
+  font-size: 36px;
+}
+.home p{
+  font-size: 18px;
+  text-align: justify;
+}
+.active-link {
+  color: orangered;
+  text-decoration: underline;
 }
