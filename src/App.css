@@ -52,3 +52,12 @@ input[type="text"] {
 .arthemetic {
   background-color: #f5913e;
 }
+.navBar{
+  display: flex;
+  justify-content: flex-end
+}
+
+
+.navBar ul a{
+  margin-right: 50px;
+}
