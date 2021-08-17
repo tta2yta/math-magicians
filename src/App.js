@@ -1,6 +1,8 @@
 import React from 'react';
+import { Router, Switch } from 'react-router-dom';
 import './App.css';
 import Calculator from './components/calculatorHooks';
+import NavBar from './components/NavBar';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -11,7 +13,12 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Calculator />
+        <NavBar />
+        <Switch>
+          <Router path="/">
+            <Calculator />
+          </Router>
+        </Switch>
       </div>
     );
   }
