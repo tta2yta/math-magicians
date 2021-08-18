@@ -12,6 +12,11 @@ test('adds two numbers', () => {
   expect(calculate(obj, obj.operation)).toMatchObject({"next": null, "operation": "+", "total": "13"});
 });
 
+it('subtract two numbers', ()=>{
+  const obj= {total: 5, next: 8, operation:"-"}
+  expect(calculate(obj, obj.operation)). toMatchObject({"next": null, "operation": "-", "total": "-3"})
+})
+
 beforeEach(() => {
   const component = render(<Calculator />);
   getByTestId = component.getByTestId;
