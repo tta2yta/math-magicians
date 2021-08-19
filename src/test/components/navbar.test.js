@@ -33,3 +33,7 @@ it('renders the Navbar component', () => {
     const headingEl = getByTestId('heading');
     expect(component.getByText(headingEl.textContent)).toBeInTheDocument();
   });
+  it('should contain correct Home link', () => {
+    const homeEl = getByTestId('Home');
+    expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
+  });

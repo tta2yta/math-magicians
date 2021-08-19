@@ -28,6 +28,7 @@ const NavBar = () => {
             key={item.id}
             to={item.path}
             activeClassName="active-link"
+            data-testid={item.text}
           >
             {item.text}
           </NavLink>
