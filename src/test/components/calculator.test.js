@@ -98,3 +98,20 @@ test('should give correct appended number', () => {
   expect(resultHeading.textContent).toBe('190');
   expect(resultHeading.textContent).not.toBe('901');
 });
+
+test('should give correct modules operation', () => {
+  const resultHeading = getByTestId('mainResult');
+  const modtBtn = getByTestId('%');
+  const equalsBtn = getByTestId('=');
+  const numberOnebtn = getByTestId('4');
+  const numberTwobtn = getByTestId('2');
+
+  expect(modtBtn.textContent).toBe('%');
+
+  fireEvent.click(numberOnebtn);
+  fireEvent.click(modtBtn);
+  fireEvent.click(numberTwobtn);
+  fireEvent.click(equalsBtn);
+  resultHeading.textContent= numberOnebtn.textContent % numberTwobtn.textContent
+  expect(resultHeading.textContent).toBe('0');
+});
