@@ -1,11 +1,10 @@
-import Calculator from "../../components/calculator"
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+import Calculator from '../../components/calculator';
 import '@testing-library/jest-dom/extend-expect';
 
-
-let getByTestId
+let getByTestId;
 
 beforeEach(() => {
   const component = render(<Calculator />);
@@ -31,7 +30,7 @@ test('should give correct subtraction operation', () => {
   fireEvent.click(subtractBtn);
   fireEvent.click(numberTwobtn);
   fireEvent.click(equalsBtn);
-  resultHeading.textContent= numberOnebtn.textContent - numberTwobtn.textContent
+  resultHeading.textContent = numberOnebtn.textContent - numberTwobtn.textContent;
   expect(resultHeading.textContent).toBe('2');
 });
 
@@ -48,7 +47,8 @@ test('should give correct Addition operation', () => {
   fireEvent.click(addtBtn);
   fireEvent.click(numberTwobtn);
   fireEvent.click(equalsBtn);
-  resultHeading.textContent= parseInt(numberOnebtn.textContent) + parseInt(numberTwobtn.textContent)
+  resultHeading.textContent = parseInt(numberOnebtn.textContent, 10)
+   + parseInt(numberTwobtn.textContent, 10);
   expect(resultHeading.textContent).toBe('11');
 });
 
@@ -65,7 +65,7 @@ it('should give correct multipliation operation', () => {
   fireEvent.click(multiplytBtn);
   fireEvent.click(numberTwobtn);
   fireEvent.click(equalsBtn);
-  resultHeading.textContent= numberOnebtn.textContent * numberTwobtn.textContent
+  resultHeading.textContent = numberOnebtn.textContent * numberTwobtn.textContent;
   expect(resultHeading.textContent).toBe('8');
 });
 test('should give correct division operation', () => {
@@ -81,7 +81,7 @@ test('should give correct division operation', () => {
   fireEvent.click(divtBtn);
   fireEvent.click(numberTwobtn);
   fireEvent.click(equalsBtn);
-  resultHeading.textContent= numberOnebtn.textContent / numberTwobtn.textContent
+  resultHeading.textContent = numberOnebtn.textContent / numberTwobtn.textContent;
   expect(resultHeading.textContent).toBe('2');
 });
 
@@ -94,7 +94,8 @@ test('should give correct appended number', () => {
   fireEvent.click(numberNineBtn);
   fireEvent.click(numberZeroBtn);
   fireEvent.click(numberOneBtn);
-  resultHeading.textContent= numberOneBtn.textContent + numberNineBtn.textContent + numberZeroBtn.textContent;
+  resultHeading.textContent = numberOneBtn.textContent
+   + numberNineBtn.textContent + numberZeroBtn.textContent;
   expect(resultHeading.textContent).toBe('190');
   expect(resultHeading.textContent).not.toBe('901');
 });
@@ -112,7 +113,7 @@ test('should give correct modules operation', () => {
   fireEvent.click(modtBtn);
   fireEvent.click(numberTwobtn);
   fireEvent.click(equalsBtn);
-  resultHeading.textContent= numberOnebtn.textContent % numberTwobtn.textContent
+  resultHeading.textContent = numberOnebtn.textContent % numberTwobtn.textContent;
   expect(resultHeading.textContent).toBe('0');
 });
 
@@ -125,6 +126,6 @@ test('should give correct sign +/-', () => {
 
   fireEvent.click(numberNineBtn);
   fireEvent.click(plusMinusBtn);
-  resultHeading.textContent= - numberNineBtn.textContent
+  resultHeading.textContent = -numberNineBtn.textContent;
   expect(resultHeading.textContent).toBe('-9');
 });

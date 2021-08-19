@@ -85,37 +85,37 @@ export default class Calculator extends React.Component {
             </div>
           </div>
           <div className="calculator-body">
-            <div className="calc-row" onClick={this.handleClick} data-testid="AC" >AC</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="+/-" >+/-</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="%" >%</div>
-            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="÷" >÷</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="AC">AC</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="+/-">+/-</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="%">%</div>
+            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="÷">÷</div>
           </div>
 
           <div className="calculator-body">
-            <div className="calc-row" onClick={this.handleClick} data-testid="7" >7</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="8" >8</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="9" >9</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="7">7</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="8">8</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="9">9</div>
             <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="x">x</div>
           </div>
 
           <div className="calculator-body">
-            <div className="calc-row" onClick={this.handleClick} data-testid="4" >4</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="5" >5</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="6" >6</div>
-            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="-" >-</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="4">4</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="5">5</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="6">6</div>
+            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="-">-</div>
           </div>
 
           <div className="calculator-body">
-            <div className="calc-row" onClick={this.handleClick} data-testid="1" >1</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="2" >2</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="3" >3</div>
-            <div className="calc-row  arthemetic" onClick={this.handleClick} data-testid="+" >+</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="1">1</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="2">2</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid="3">3</div>
+            <div className="calc-row  arthemetic" onClick={this.handleClick} data-testid="+">+</div>
           </div>
 
           <div className="calculator-body-last">
-            <div className="calc-row cols-span-2" onClick={this.handleClick} data-testid="0" >0</div>
-            <div className="calc-row" onClick={this.handleClick} data-testid="." >.</div>
-            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="=" >=</div>
+            <div className="calc-row cols-span-2" onClick={this.handleClick} data-testid="0">0</div>
+            <div className="calc-row" onClick={this.handleClick} data-testid=".">.</div>
+            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="=">=</div>
           </div>
         </div>
         <div className="math-logic">
