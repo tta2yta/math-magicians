@@ -1,4 +1,4 @@
-import operate from "../logic/operate"
+import operate from "../../logic/operate"
 
 test('adds two numbers', () => {
     expect(operate(4, 5,  "+")).toEqual("9");
