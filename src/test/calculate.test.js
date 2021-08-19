@@ -9,13 +9,20 @@ import '@testing-library/jest-dom/extend-expect';
 describe(" Operation of Calulator", ()=>{
   test('should return object with null property values when "AC" button is clicked', () => {
     const obj= {total:null, next: 10, operation:"AC"}
-    expect(calculate(obj, obj.operation)).toMatchObject({"next": null, "operation": null, "total": null});
+    expect(calculate(obj, obj.operation)).toMatchObject({next: null, operation: null, total: null});
   });
   
   it('should return correct object reperesentation when "+" button is clicked', ()=>{
     const obj= {total: 5, next: 8, operation:"+"}
-    expect(calculate(obj, obj.operation)). toMatchObject({"next": null, "operation": "+", "total": "13"})
-  })
+    expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "+", total: "13"})
+  });
+
+  it('should return correct object reperesentation when "-" button is clicked', ()=>{
+    const obj= {total: 5, next: 8, operation:"-"}
+    expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "-", total: "-3"})
+  });
+
+
 })
 
 
