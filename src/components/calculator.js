@@ -88,7 +88,7 @@ export default class Calculator extends React.Component {
             <div className="calc-row" onClick={this.handleClick} data-testid="AC" >AC</div>
             <div className="calc-row" onClick={this.handleClick} data-testid="+/-" >+/-</div>
             <div className="calc-row" onClick={this.handleClick} data-testid="%" >%</div>
-            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="" >÷</div>
+            <div className="calc-row arthemetic" onClick={this.handleClick} data-testid="÷" >÷</div>
           </div>
 
           <div className="calculator-body">

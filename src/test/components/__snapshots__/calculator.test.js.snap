@@ -45,7 +45,7 @@ exports[`renders the Calculator component 1`] = `
       </div>
       <div
         className="calc-row arthemetic"
-        data-testid=""
+        data-testid="÷"
         onClick={[Function]}
       >
         ÷
