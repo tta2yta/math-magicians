@@ -29,6 +29,10 @@ describe(" Operation of Calulator", ()=>{
     const obj= {total: 9, next: 3, operation:"÷"}
     expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "÷", total: "3"})
   });
+  it('should return correct object reperesentation when "%" button is clicked', ()=>{
+    const obj= {total: 4, next: 3, operation:"%"}
+    expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "%", total: "1"})
+  });
 
 })
 
