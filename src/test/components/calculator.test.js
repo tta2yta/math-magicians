@@ -51,3 +51,20 @@ test('should give correct Addition operation', () => {
   resultHeading.textContent= parseInt(numberOnebtn.textContent) + parseInt(numberTwobtn.textContent)
   expect(resultHeading.textContent).toBe('11');
 });
+
+it('should give correct multipliation operation', () => {
+  const resultHeading = getByTestId('mainResult');
+  const subtractBtn = getByTestId('x');
+  const equalsBtn = getByTestId('=');
+  const numberOnebtn = getByTestId('4');
+  const numberTwobtn = getByTestId('2');
+
+  expect(subtractBtn.textContent).toBe('x');
+
+  fireEvent.click(numberOnebtn);
+  fireEvent.click(subtractBtn);
+  fireEvent.click(numberTwobtn);
+  fireEvent.click(equalsBtn);
+  resultHeading.textContent= numberOnebtn.textContent * numberTwobtn.textContent
+  expect(resultHeading.textContent).toBe('8');
+});
