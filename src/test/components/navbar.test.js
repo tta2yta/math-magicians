@@ -29,3 +29,7 @@ it('renders the Navbar component', () => {
   
     expect(component).toMatchSnapshot();
   });
+  it('should contain correct heading', () => {
+    const headingEl = getByTestId('heading');
+    expect(component.getByText(headingEl.textContent)).toBeInTheDocument();
+  });

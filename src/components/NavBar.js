@@ -21,7 +21,7 @@ const NavBar = () => {
   ];
   return (
     <div className="navBar">
-      <h1>Math Magicians</h1>
+      <h1 data-testid="heading">Math Magicians</h1>
       <ul>
         {links.map((item) => (
           <NavLink

@@ -4,7 +4,9 @@ exports[`renders the Navbar component 1`] = `
 <div
   className="navBar"
 >
-  <h1>
+  <h1
+    data-testid="heading"
+  >
     Math Magicians
   </h1>
   <ul>
