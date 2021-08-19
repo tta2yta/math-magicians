@@ -37,3 +37,11 @@ it('renders the Navbar component', () => {
     const homeEl = getByTestId('Home');
     expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
   });
+  it('should contain correct Calculator link', () => {
+    const homeEl = getByTestId('Calculator');
+    expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
+  });
+  it('should contain correct Qoute link', () => {
+    const homeEl = getByTestId('Qoute');
+    expect(component.getByText(homeEl.textContent)).toBeInTheDocument();
+  });
