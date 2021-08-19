@@ -115,3 +115,16 @@ test('should give correct modules operation', () => {
   resultHeading.textContent= numberOnebtn.textContent % numberTwobtn.textContent
   expect(resultHeading.textContent).toBe('0');
 });
+
+test('should give correct sign +/-', () => {
+  const plusMinusBtn = getByTestId('+/-');
+  const numberNineBtn = getByTestId('9');
+  const resultHeading = getByTestId('mainResult');
+
+  expect(plusMinusBtn.textContent).toBe('+/-');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(plusMinusBtn);
+  resultHeading.textContent= - numberNineBtn.textContent
+  expect(resultHeading.textContent).toBe('-9');
+});
