@@ -44,34 +44,3 @@ describe(" Operation of Calulator", ()=>{
   });
 
 })
-
-
-// beforeEach(() => {
-//   const component = render(<Calculator />);
-//   getByTestId = component.getByTestId;
-//   console.log(getByTestId)
-// });
-
-// it('renders the Calculator component', () => {
-//   const component = renderer.create(<Calculator />).toJSON();
-
-//   expect(component).toMatchSnapshot();
-// });
-
-// test('should give correct subtraction operation', () => {
-//   const resultHeading = getByTestId('mainResult');
-//   const subtractBtn = getByTestId('-');
-//   const equalsBtn = getByTestId('=');
-//   const numberOnebtn = getByTestId('1');
-//   const numberTwobtn = getByTestId('2');
-//   console.log(equalsBtn)
-
-//   expect(subtractBtn.textContent).toBe('-');
-
-//   resultHeading.textContent=2
-//   fireEvent.click(numberOnebtn);
-//   // fireEvent.click(subtractBtn);
-//   // fireEvent.click(numberTwobtn);
-//   // fireEvent.click(equalsBtn);
-//   // expect(resultHeading.textContent).toBe('-1');
-// });
