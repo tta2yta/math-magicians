@@ -84,3 +84,17 @@ test('should give correct division operation', () => {
   resultHeading.textContent= numberOnebtn.textContent / numberTwobtn.textContent
   expect(resultHeading.textContent).toBe('2');
 });
+
+test('should give correct appended number', () => {
+  const numberOneBtn = getByTestId('1');
+  const numberNineBtn = getByTestId('9');
+  const numberZeroBtn = getByTestId('0');
+  const resultHeading = getByTestId('mainResult');
+
+  fireEvent.click(numberNineBtn);
+  fireEvent.click(numberZeroBtn);
+  fireEvent.click(numberOneBtn);
+  resultHeading.textContent= numberOneBtn.textContent + numberNineBtn.textContent + numberZeroBtn.textContent;
+  expect(resultHeading.textContent).toBe('190');
+  expect(resultHeading.textContent).not.toBe('901');
+});
