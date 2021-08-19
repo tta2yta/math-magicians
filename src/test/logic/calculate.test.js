@@ -1,5 +1,5 @@
-import calculate from "../logic/calculate"
-import Calculator from "../components/calculator"
+import calculate from "../../logic/calculate"
+import Calculator from "../../components/calculator"
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
