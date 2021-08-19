@@ -21,7 +21,10 @@ describe(" Operation of Calulator", ()=>{
     const obj= {total: 5, next: 8, operation:"-"}
     expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "-", total: "-3"})
   });
-
+  it('should return correct object reperesentation when "x" button is clicked', ()=>{
+    const obj= {total: 6, next: 9, operation:"x"}
+    expect(calculate(obj, obj.operation)). toMatchObject({next: null, operation: "x", total: "54"})
+  });
 
 })
 
