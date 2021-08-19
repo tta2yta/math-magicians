@@ -49,6 +49,7 @@ Read a random math-related quote.
 
 ## Run Test
 npm run test
+
 npm run jest
 
 
